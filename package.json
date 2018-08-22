@@ -97,7 +97,8 @@
     "update-authors": "git log --format=\"%aN <%aE>\" | sort -f | uniq > AUTHORS.txt",
     "benchmark": "node ./benchmark/runner",
     "benchmark-browser": "node ./benchmark/runner --bundle",
-    "convert-idl": "node ./scripts/webidl/convert"
+    "convert-idl": "node ./scripts/webidl/convert",
+    "postinstall": "node ./scripts/webidl/convert"
   },
   "main": "./lib/api.js"
 }
