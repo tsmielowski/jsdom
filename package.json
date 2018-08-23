@@ -35,11 +35,13 @@
     "pn": "^1.1.0",
     "request": "^2.87.0",
     "request-promise-native": "^1.0.5",
+    "rimraf": "^2.6.2",
     "sax": "^1.2.4",
     "symbol-tree": "^3.2.2",
     "tough-cookie": "^2.3.4",
     "w3c-hr-time": "^1.0.1",
     "webidl-conversions": "^4.0.2",
+    "webidl2js": "^9.0.0",
     "whatwg-encoding": "^1.0.3",
     "whatwg-mimetype": "^2.1.0",
     "whatwg-url": "^6.4.1",
@@ -66,12 +68,10 @@
     "optimist": "0.6.1",
     "portfinder": "^1.0.13",
     "q": "^1.5.1",
-    "rimraf": "^2.6.2",
     "server-destroy": "^1.0.1",
     "st": "^1.2.2",
     "watchify": "^3.11.0",
-    "wd": "^1.7.0",
-    "webidl2js": "^9.0.0"
+    "wd": "^1.7.0"
   },
   "browser": {
     "canvas": false,
@@ -98,7 +98,7 @@
     "benchmark": "node ./benchmark/runner",
     "benchmark-browser": "node ./benchmark/runner --bundle",
     "convert-idl": "node ./scripts/webidl/convert",
-    "postinstall": "npm install && node ./scripts/webidl/convert"
+    "postinstall": "npm run convert-idl"
   },
   "main": "./lib/api.js"
 }
